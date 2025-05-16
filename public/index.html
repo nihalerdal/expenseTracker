@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+  </head>
+
+  <body>
+    <h1>Expense Tracker</h1>
+    <hr />
+    <p id="message"></p>
+    <hr />
+    <div id="logon-register" style="display:none;">
+      <button type="button" id="logon">logon</button>
+      <button type="button" id="register">register</button>
+    </div>
+
+    <div id="logon-div" style="display:none;">
+      <form>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+        </div>
+        <button type="button" id="logon-button">Logon</button>
+        <button type="button" id="logon-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <div id="register-div" style="display:none;">
+      <form>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email1">Email:</label>
+          <input type="email" id="email1" />
+        </div>
+        <div>
+          <label for="password1">Password:</label>
+          <input type="password" id="password1" />
+        </div>
+        <div>
+          <label for="password2">Verify Password:</label>
+          <input type="password" id="password2" />
+        </div>
+        <button type="button" id="register-button">Register</button>
+        <button type="button" id="register-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <div id="expenses" style="display:none;">
+      <p id="expenses-message"></p>
+      <table id="expenses-table">
+        <tr id="expenses-table-header">
+          <th>Title</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Main Category</th>
+          <th>Sub Category</th>
+          <th>Description</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+
+        <tr>
+          <td>Example Co.</td>
+          <td>1000</td>
+          <td>2025-05-15</td>
+          <td>Housing</td>
+          <td>Rent</td>
+          <td>Monthly rent payment</td>
+          <td><button class="edit-button" data-id="123">Edit</button></td>
+          <td><button class="delete-button" data-id="123">Delete</button></td>
+        </tr>
+      </table>
+      <button type="button" id="add-expense">Add Expense</button>
+      <button type="button" id="logoff">Log off</button>
+    </div>
+
+    <div id="edit-expense" style="display:none;">
+      <form>
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" />
+        </div>
+        <div>
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" />
+        </div>
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" />
+        </div>
+        <div>
+          <label for="mainCategory">Main Category:</label>
+          <select id="mainCategory">
+            <option value="Housing">Housing</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Food">Food</option>
+            <option value="Health">Health</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Education">Education</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Personal">Personal</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="subCategory">Sub Category:</label>
+          <select id="subCategory">
+            <option value="Rent">Rent</option>
+            <option value="Mortgage">Mortgage</option>
+            <option value="Fuel">Fuel</option>
+            <option value="Car Insurance">Car Insurance</option>
+            <option value="Car Maintenance">Car Maintenance</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Dining Out">Dining Out</option>
+            <option value="Medical Expenses">Medical Expenses</option>
+            <option value="Health Insurance">Health Insurance</option>
+            <option value="Movies">Movies</option>
+            <option value="Concerts">Concerts</option>
+            <option value="Books">Books</option>
+            <option value="Tuition">Tuition</option>
+            <option value="Internet">Internet</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Water">Water</option>
+            <option value="Haircut">Haircut</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Gifts">Gifts</option>
+            <option value="Donations">Donations</option>
+            <option value="Travel">Travel</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Flights">Flights</option>
+            <option value="Gym">Gym</option>
+            <option value="Vet">Vet</option>
+            <option value="Pet Food">Pet Food</option>
+            <option value="Cosmetics">Cosmetics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="description">Description:</label>
+          <input type="text" id="description" />
+        </div>
+        <button type="button" id="adding-expense">add</button>
+        <button type="button" id="edit-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

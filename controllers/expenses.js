@@ -78,7 +78,7 @@ const deleteExpense = async (req, res, next) => {
       params: { id: expenseId },
     } = req;
 
-    const expense = await Expense.findByIdAndRemove({
+    const expense = await Expense.findOneAndDelete({
       _id: expenseId,
       createdBy: userId,
     });
@@ -86,7 +86,7 @@ const deleteExpense = async (req, res, next) => {
       throw new NotFoundError(`No expense with the id ${expenseId}`);
     }
 
-    res.status(StatusCodes.OK).send();
+    res.status(StatusCodes.OK).json({ msg: "The entry was deleted." });
   } catch (error){
     next(error)
   }
